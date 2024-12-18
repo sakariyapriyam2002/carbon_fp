@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carbon Footprint Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body><br><br>
+    <h2><center>Carbon Footprint Report</center></h2>
+    <br>
+    <center>
+    <div class="OutputForm">
+        <p>1. Waste Emissions:  => {{ result['waste'] }} kg CO2</p>
+        <p>2. Transportation Emissions:  => {{ result['transport'] }} kg CO2</p>
+        <p>3. Energy Emissions:  => {{ result['energy'] }} kg CO2</p>
+        <p><strong>Total Carbon Footprint: {{ result['total'] }} kg CO2</strong></p>
+    </div>
+    </center>
+    <br>
+    <br>
+    <center>
+    <button id="btn2">
+        <a href="/download_pdf?energy={{ result['energy'] }}&transport={{ result['transport'] }}&waste={{ result['waste'] }}&total={{ result['total'] }}" target="_blank">Download PDF</a>
+    </button>
+    </center>
+</body>
+
+</html>

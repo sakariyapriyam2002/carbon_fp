@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body><br><br>
+    <h2><center>Enter Details</center></h2>
+    <div class="inputForm">
+        <center>
+        <form action="/" method="POST" target="_blank">
+            <br><p>1. Waste generation (kg): <br><input type="text" name="waste" placeholder="Enter the Number"><br></p>
+            <br><p>2. Distance covered by car (km): <input type="text" name="distance" placeholder="Enter the Number"><br></p>
+            <br><p>3. Electricity consumption (kWh per month): <input type="text" name="electricity" placeholder="Enter the Number"><br></p>
+            <br><input id="btn1" type="submit" value="Calculate">
+        </form>
+        </center>
+    </div>
+</body>
+
+</html>
